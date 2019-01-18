@@ -42,7 +42,7 @@ function git_icon_color() {
 }
 
 function git_icon() {
-    if [ ! `git_branch` == "" ]; then
+    if [ -d .git/ ]; then
         if [[ `git status --porcelain 2> /dev/null` ]]; then
             printf " ✗"
         else
